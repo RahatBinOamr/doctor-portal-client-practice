@@ -62,7 +62,7 @@ const Register = () => {
   };
   const saveUser =(email,name)=>{
     const user = {email,name}
-    fetch(`http://localhost:5000/users`,{
+    fetch(`https://y-five-tau.vercel.app/users`,{
       method:"POST",
       headers:{
         'content-type':'application/json'

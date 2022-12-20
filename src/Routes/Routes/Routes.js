@@ -69,8 +69,8 @@ const router = createBrowserRouter([
                 },
                 {
                     path:'/dashboard/payment/:id',
-                    element:<AdminRoute> <Payment/> </AdminRoute>,
-                    loader:({params})=>fetch(`http://localhost:5000/booking/${params.id}`)
+                    element:<Payment/>,
+                    loader:({params})=>fetch(`https://y-five-tau.vercel.app/booking/${params.id}`)
                 },
 
             ]

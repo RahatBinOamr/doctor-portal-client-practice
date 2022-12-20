@@ -11,7 +11,7 @@ const [treatment,setTreatment]=useState(null)
 const date = format(selectedDate,'PP')
 const {data:appointmentOption=[],refetch,isLoading}=useQuery({
      queryKey:['appointmentOption',date],
-     queryFn:()=>  fetch(`http://localhost:5000/appointmentOptions?date=${date}`)
+     queryFn:()=>  fetch(`https://y-five-tau.vercel.app/appointmentOptions?date=${date}`)
      .then(res=>res.json())
 })
 if(isLoading){
@@ -19,7 +19,7 @@ if(isLoading){
 }
 
 // useEffect(()=>{
-//     fetch(`http://localhost:5000/appointmentOptions`)
+//     fetch(`https://y-five-tau.vercel.app/appointmentOptions`)
 //     .then(res=>res.json())
 //     .then(data=>setAppointmentOption(data))
 // },[])

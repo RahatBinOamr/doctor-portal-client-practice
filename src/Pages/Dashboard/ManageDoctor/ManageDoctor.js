@@ -16,7 +16,7 @@ const ManageDoctor = () => {
         queryKey: ['doctors'],
         queryFn: async () => {
             try {
-                const res = await fetch('http://localhost:5000/doctors', {
+                const res = await fetch('https://y-five-tau.vercel.app/doctors', {
                     headers: {
                         authorization: `bearer ${localStorage.getItem('accessToken')}`
                     }
@@ -31,7 +31,7 @@ const ManageDoctor = () => {
     });
     const handleDeleteDoctor = doctor => {
         console.log(doctor)
-        fetch(`http://localhost:5000/doctors/${doctor._id}`, {
+        fetch(`https://y-five-tau.vercel.app/doctors/${doctor._id}`, {
             method: 'DELETE', 
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
